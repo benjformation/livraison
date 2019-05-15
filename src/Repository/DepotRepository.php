@@ -5,6 +5,7 @@ namespace App\Repository;
 use App\Entity\Depot;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Bridge\Doctrine\RegistryInterface;
+// ceci est une modif de peureux qui comprend que dalle à ce truc !
 
 /**
  * @method Depot|null find($id, $lockMode = null, $lockVersion = null)
