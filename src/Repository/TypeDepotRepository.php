@@ -5,7 +5,7 @@ namespace App\Repository;
 use App\Entity\TypeDepot;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Bridge\Doctrine\RegistryInterface;
-
+// je commit, tu commit, il kernel, vous gitez !
 /**
  * @method TypeDepot|null find($id, $lockMode = null, $lockVersion = null)
  * @method TypeDepot|null findOneBy(array $criteria, array $orderBy = null)
