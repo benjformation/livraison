@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="types_depot")
  * @ORM\Entity
  */
-class TypesDepot
+class TypeDepot
 {
     /**
      * @var int
@@ -27,6 +27,23 @@ class TypesDepot
      * @ORM\Column(name="nom", type="string", length=16, nullable=false)
      */
     private $nom;
+
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getNom(): ?string
+    {
+        return $this->nom;
+    }
+
+    public function setNom(string $nom): self
+    {
+        $this->nom = $nom;
+
+        return $this;
+    }
 
 
 }

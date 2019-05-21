@@ -24,7 +24,7 @@ class Colis
     /**
      * @var \Clients
      *
-     * @ORM\ManyToOne(targetEntity="Clients")
+     * @ORM\ManyToOne(targetEntity="Client")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="expediteur", referencedColumnName="id")
      * })
@@ -34,7 +34,7 @@ class Colis
     /**
      * @var \Clients
      *
-     * @ORM\ManyToOne(targetEntity="Clients")
+     * @ORM\ManyToOne(targetEntity="Client")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="destinataire", referencedColumnName="id")
      * })
@@ -44,7 +44,7 @@ class Colis
     /**
      * @var \Depots
      *
-     * @ORM\ManyToOne(targetEntity="Depots")
+     * @ORM\ManyToOne(targetEntity="Depot")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="livraison_en_depot", referencedColumnName="id")
      * })
@@ -54,12 +54,65 @@ class Colis
     /**
      * @var \Tarifs
      *
-     * @ORM\ManyToOne(targetEntity="Tarifs")
+     * @ORM\ManyToOne(targetEntity="Tarif")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="tarif", referencedColumnName="id")
      * })
      */
     private $tarif;
+
+    public function getNumero(): ?int
+    {
+        return $this->numero;
+    }
+
+    public function getExpediteur(): ?Client
+    {
+        return $this->expediteur;
+    }
+
+    public function setExpediteur(?Client $expediteur): self
+    {
+        $this->expediteur = $expediteur;
+
+        return $this;
+    }
+
+    public function getDestinataire(): ?Client
+    {
+        return $this->destinataire;
+    }
+
+    public function setDestinataire(?Client $destinataire): self
+    {
+        $this->destinataire = $destinataire;
+
+        return $this;
+    }
+
+    public function getLivraisonEnDepot(): ?Depot
+    {
+        return $this->livraisonEnDepot;
+    }
+
+    public function setLivraisonEnDepot(?Depot $livraisonEnDepot): self
+    {
+        $this->livraisonEnDepot = $livraisonEnDepot;
+
+        return $this;
+    }
+
+    public function getTarif(): ?Tarif
+    {
+        return $this->tarif;
+    }
+
+    public function setTarif(?Tarif $tarif): self
+    {
+        $this->tarif = $tarif;
+
+        return $this;
+    }
 
 
 }

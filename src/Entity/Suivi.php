@@ -39,7 +39,7 @@ class Suivi
     /**
      * @var \Depots
      *
-     * @ORM\ManyToOne(targetEntity="Depots")
+     * @ORM\ManyToOne(targetEntity="Depot")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="depot", referencedColumnName="id")
      * })
@@ -57,6 +57,66 @@ class Suivi
      * })
      */
     private $id;
+
+    public function getInstant(): ?\DateTimeInterface
+    {
+        return $this->instant;
+    }
+
+    public function setInstant(\DateTimeInterface $instant): self
+    {
+        $this->instant = $instant;
+
+        return $this;
+    }
+
+    public function getStatutColis(): ?int
+    {
+        return $this->statutColis;
+    }
+
+    public function setStatutColis(int $statutColis): self
+    {
+        $this->statutColis = $statutColis;
+
+        return $this;
+    }
+
+    public function getColis(): ?Colis
+    {
+        return $this->colis;
+    }
+
+    public function setColis(?Colis $colis): self
+    {
+        $this->colis = $colis;
+
+        return $this;
+    }
+
+    public function getDepot(): ?Depot
+    {
+        return $this->depot;
+    }
+
+    public function setDepot(?Depot $depot): self
+    {
+        $this->depot = $depot;
+
+        return $this;
+    }
+
+    public function getId(): ?StatutColis
+    {
+        return $this->id;
+    }
+
+    public function setId(?StatutColis $id): self
+    {
+        $this->id = $id;
+
+        return $this;
+    }
 
 
 }
