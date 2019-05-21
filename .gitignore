@@ -52,6 +52,7 @@
 /.idea/
 
 # local config
+/.env
 /.env.test
 /phpunit.xml.dist
 /package-lock.json
