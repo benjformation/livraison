@@ -5,6 +5,5 @@ https://symfony.com/doc/current/doctrine/reverse_engineering.html
 
 Création du CRUD
 
-https://symfony.com/doc/current/bundles/SensioGeneratorBundle/commands/generate_doctrine_crud.html
-utiliser : composer require symfony/maker-bundle
+https://symfony.com/blog/new-and-improved-generators-for-makerbundleutiliser : composer require symfony/maker-bundle
 php bin/console make:crud
