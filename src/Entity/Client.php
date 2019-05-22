@@ -8,9 +8,13 @@ use Doctrine\ORM\Mapping as ORM;
  * Clients
  *
  * @ORM\Table(name="clients")
- * @ORM\Entity
+/**
+ * @ORM\Entity(repositoryClass="App\Entity")
  */
-class Client
+ /*class MyClass
+*{
+ */
+/*class Client
 {
     /**
      * @var int
@@ -18,6 +22,9 @@ class Client
      * @ORM\Column(name="id", type="integer", nullable=false)
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
+     * /**
+class MyClass
+{
      */
     private $id;
 
