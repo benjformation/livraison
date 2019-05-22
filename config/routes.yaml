@@ -1,3 +1,45 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+
+#mettre d'abord:
+#(le nom de la Route) - le namespace
+# ( path) - chemin de la route
+# (controller) - la fonction
+
+#@Route("/listerTout", name="client_listerTout")
+
+client_listerTout:
+    path: /client/listerTout
+    controller: App\Controller\ClientController::listerTout
+
+#@Route("/new", name="client_new", methods={"GET","POST"})
+
+client_new:
+    path: /client/new/
+    controller: App\Controller\ClientController::new
+    methods: GET|POST
+
+
+#@Route("/{id}", name="client_show", methods={"GET"})
+
+client_show:
+    path: /client/show
+    controller: App\Controller\ClientController::show
+    methods: GET
+
+
+#@Route("/{id}/edit", name="client_edit", methods={"GET","POST"})
+
+client_edit:
+    path: /client/edit
+    controller: App\Controller\ClientController::edit
+    methods: GET|POST
+
+
+#@Route("/{id}", name="client_delete", methods={"DELETE"})
+
+clent_delete:
+    path: /client/delete
+    controller: App\Controller\ClientController::delete
+    methods: DELETE
