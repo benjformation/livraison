@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit TypeDepot{% endblock %}
+
+{% block body %}
+    <h1>Edit TypeDepot</h1>
+
+    {{ include('type_depot/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('type_depot_index') }}">back to list</a>
+
+    {{ include('type_depot/_delete_form.html.twig') }}
+{% endblock %}
