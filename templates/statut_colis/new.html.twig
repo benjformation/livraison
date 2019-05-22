@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New StatutColis{% endblock %}
+
+{% block body %}
+    <h1>Create new StatutColis</h1>
+
+    {{ include('statut_colis/_form.html.twig') }}
+
+    <a href="{{ path('statut_colis_index') }}">back to list</a>
+{% endblock %}

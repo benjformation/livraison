@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit StatutColis{% endblock %}
+
+{% block body %}
+    <h1>Edit StatutColis</h1>
+
+    {{ include('statut_colis/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('statut_colis_index') }}">back to list</a>
+
+    {{ include('statut_colis/_delete_form.html.twig') }}
+{% endblock %}
