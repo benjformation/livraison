@@ -1,3 +1,27 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+
+client_listerTout:
+    path: /client/listerTout
+    controller: App\Controller\ClientController::listerTout
+
+client_creer:
+    path: /client/newlivraisonstarare
+    controller: App\Controller\ClientController::new
+    methods: GET|POST
+
+client_show:
+    path: /client/{id}
+    controller: App\Controller\ClientController::show
+
+client_edit:
+    path: /client/{id}/edit
+    controller: App\Controller\ClientController::edit
+    methods: GET|POST
+
+client_delete:
+    path: /client/{id}
+    controller:  App\Controller\ClientController::delete
+    methods: DELETE
+
