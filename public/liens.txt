@@ -1,0 +1,14 @@
+Création des Entities
+
+https://symfony.com/doc/current/doctrine.html#creating-an-entity-class
+https://symfony.com/doc/current/doctrine/reverse_engineering.html
+
+Création du CRUD
+
+https://symfony.com/blog/new-and-improved-generators-for-makerbundleutiliser : composer require symfony/maker-bundle
+php bin/console make:crud
+
+
+npm install -g webpack
+npm install -g yarn
+yarn add @symfony/webpack-encore --dev

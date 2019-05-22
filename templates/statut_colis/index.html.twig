@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}StatutColis index{% endblock %}
+
+{% block body %}
+    <h1>StatutColis index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for statut_coli in statut_colis %}
+            <tr>
+                <td>{{ statut_coli.id }}</td>
+                <td>{{ statut_coli.nom }}</td>
+                <td>
+                    <a href="{{ path('statut_colis_show', {'id': statut_coli.id}) }}">show</a>
+                    <a href="{{ path('statut_colis_edit', {'id': statut_coli.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('statut_colis_new') }}">Create new</a>
+{% endblock %}

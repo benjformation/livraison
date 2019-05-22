@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}TypeDepot index{% endblock %}
+
+{% block body %}
+    <h1>TypeDepot index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for type_depot in type_depots %}
+            <tr>
+                <td>{{ type_depot.id }}</td>
+                <td>{{ type_depot.nom }}</td>
+                <td>
+                    <a href="{{ path('type_depot_show', {'id': type_depot.id}) }}">show</a>
+                    <a href="{{ path('type_depot_edit', {'id': type_depot.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('type_depot_new') }}">Create new</a>
+{% endblock %}

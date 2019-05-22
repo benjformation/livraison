@@ -8,10 +8,7 @@
 /app/spool/*
 
 # Cache, session files and logs (Symfony3)
-/var/cache/*
-/var/log/*
-/var/logs/*
-/var/sessions/*
+/var/
 !var/cache/.gitkeep
 !var/logs/.gitkeep
 !var/sessions/.gitkeep
@@ -52,8 +49,12 @@
 /.idea/
 
 # local config
+/.env
 /.env.test
 /phpunit.xml.dist
 /package-lock.json
 /symfony.lock
 /composer.lock
+
+# node & packers
+/node_modules/
