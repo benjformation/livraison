@@ -3,7 +3,7 @@
 #    controller: App\Controller\DefaultController::index
 
 #nom de la route
-#
+
 client_listerTout:
     path: /client/listerTout
     controller: App\Controller\ClientController::listerTout
