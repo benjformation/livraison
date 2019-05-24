@@ -33,7 +33,7 @@ class TypeDepotRepository extends ServiceEntityRepository
             ->getQuery()
             ->getResult()
         ;
-    }
+     }
     */
 
     /*

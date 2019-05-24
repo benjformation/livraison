@@ -1,27 +1,44 @@
-#index:
-#    path: /
+# mettre la nom de la route :
+# mettre path : chemin entier de la route
+# namespace\le nom de la class :: nom de la méthode (la methode est un fonction dans une class)
+
+
+# exemple :
+
+#index:                     (nom de la route)
+#    path: /                (chemin de la route)
 #    controller: App\Controller\DefaultController::index
 
 
+
+
+#@Route("/listerTout", name="client_listerTout")
+
 client_listerTout:
     path: /client/listerTout
-    controller: App\Controller\ClientController::listerTout
-
-
+    controller:  App\Controller\ClientController::listerTout
+    methods: GET
 
 client_creer:
+  path: /client/new
+  controller: App\Controller\ClientController::new
+  methods: GET|POST
+
+# * @Route("/new", name="client_new", methods={"GET","POST"})
+
+client_new:
     path: /client/new
     controller: App\Controller\ClientController::new
     methods: GET|POST
 
-
-
+#* @Route("/{id}", name="client_show", methods={"GET"})
 
 client_show:
     path: /client/{id}
     controller: App\Controller\ClientController::show
+    methods: GET
 
-
+# * @Route("/{id}/edit", name="client_edit", methods={"GET","POST"})
 
 client_edit:
     path: /client/{id}/edit
@@ -30,8 +47,8 @@ client_edit:
 
 
 
+# * @Route("/{id}", name="client_delete", methods={"DELETE"})
 client_delete:
     path: /client/{id}
     controller: App\Controller\ClientController::delete
     methods: DELETE
-
