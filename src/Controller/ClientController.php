@@ -20,7 +20,7 @@ class ClientController extends AbstractController
             ->findAll();
 
         return $this->render('client/index.html.twig', [
-            'clients' => $clients,
+            'clientsTwig' => $clients,
         ]);
     }
 
